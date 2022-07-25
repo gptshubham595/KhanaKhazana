@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6397116e-2f69-4713-ad13-671285e5e1dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../GameDev/KhanaKhazana/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GameDev/KhanaKhazana/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GameDev/KhanaKhazana/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GameDev/KhanaKhazana/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GameDev/KhanaKhazana/KhanaKhazana.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dmart/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/controller/StoreManagerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/model/Approve_as_StoreMngrRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/model/Approve_as_StoreMngrResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/model/Register_as_StoreMngrRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/model/Register_as_StoreMngrResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/repository/StoreMngrRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/service/StoreMangrService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/KhanaKhazana.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/configure/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GameDev/game_code_class.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../GameDev/game_code_class.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dmart/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dmart/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dmart/src/main/java/com/dmart/store/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dmart/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Dmart/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dmart/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Dmart/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dmart/target/classes/com/dmart/store/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Dmart/target/classes/com/dmart/store/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dmart/target/classes/com/dmart/store/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Dmart/target/classes/com/dmart/store/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dmart/target/classes/com/dmart/store/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Dmart/target/classes/com/dmart/store/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogApplication/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../blogApplication/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/controller/ArticleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/model/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/model/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/model/ArticleResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/model/ArticleResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/model/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/model/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../blogApplication/target/classes/com/olacab/blog/service/UserService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CRXUqp4VSq6dpGib5DW8xb1JmI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6397116e-2f69-4713-ad13-671285e5e1dc" name="Changes" comment="" />
+      <created>1658766391266</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658766391266</updated>
+      <workItem from="1658766392682" duration="440000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
