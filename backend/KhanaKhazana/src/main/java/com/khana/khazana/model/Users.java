@@ -9,9 +9,9 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long userId;
 
-    @Column(nullable=false, length=20, unique = true)
+    @Column(nullable=false, length=20)
     private String username;
-
+    //username is person name
     @Column(nullable=false, length=20, unique = false)
     private String password;
 
@@ -38,6 +38,10 @@ public class Users {
 
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    public long getUserId() {
+        return userId;
     }
 
     public long getUserId() {

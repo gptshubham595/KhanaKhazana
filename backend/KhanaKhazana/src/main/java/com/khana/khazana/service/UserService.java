@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
+    
+    public static boolean isLoggedIn = false;
+    public static  String currRole = "customer";
 
     @Autowired
     UserRepository userRepository;
@@ -54,3 +57,4 @@ public class UserService {
         }
     }
 }
+
