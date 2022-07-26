@@ -30,6 +30,20 @@ public class Users {
     @Column( length=255)
     private String profilePic;
 
+    private String salt;
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public long getUserId() {
+        return userId;
+    }
+
     public long getUserId() {
         return userId;
     }

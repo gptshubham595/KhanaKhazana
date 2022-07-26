@@ -18,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,7 +39,11 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+<<<<<<< HEAD
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+=======
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+>>>>>>> 59beeeebd1c379cb0706415e1703c1df6a735c2f
       </map>
     </option>
   </component>
@@ -56,8 +60,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
+    "last_opened_file_path": "D:/Training/OLAGRP9/backend/KhanaKhazana"
+=======
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "node.js.selected.package.tslint": "(autodetect)"
+>>>>>>> 59beeeebd1c379cb0706415e1703c1df6a735c2f
   }
 }]]></component>
   <component name="RunManager">
