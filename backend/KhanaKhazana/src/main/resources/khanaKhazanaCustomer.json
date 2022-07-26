@@ -133,7 +133,7 @@
                             "restaurantId": "Integer",
                             "restaurantName": "String",
                             "restaurantImage": "String",
-                            "restaurantDescription": "String",
+                            "restaurantDescription": "String"
                         }
                     ]
                 },
@@ -160,7 +160,8 @@
                             "foodImage": "String",
                             "foodDescription": "String",
                             "foodType": "Boolean",
-                            "foodId": "Integer"
+                            "foodId": "Integer",
+                            "inStock":"boolean"
                         }
                     ]
                 },
@@ -186,7 +187,7 @@
                             "restaurantId": "Integer",
                             "restaurantName": "String",
                             "restaurantImage": "String",
-                            "restaurantDescription": "String",
+                            "restaurantDescription": "String"
                         }
                     ]
                 },
@@ -232,7 +233,7 @@
                     "foodId": "Integer",
                     "qty": "Integer",
                     "required": true,
-                    "restaurantId": "Integer",
+                    "restaurantId": "Integer"
                 }
             ],
             "coupon": {
@@ -255,7 +256,7 @@
                         "transactionId": "Integer",
                         "success": "Payment Transaction",
                         "timeStamp": "Date",
-                        "restaurantDescription": "String",
+                        "restaurantDescription": "String"
                     }
                 },
                 "error": {
@@ -265,7 +266,6 @@
             }
         }
     },
-    ,
     {
         "endpoint": "profile",
         "path": "/profile",
@@ -323,7 +323,7 @@
             },
             "address": {
                 "type": "String"
-            },
+            }
         },
         "response": {
             "http-status": 200,
@@ -353,7 +353,7 @@
                         {
                             "foodId": "Integer",
                             "qty": "Integer",
-                            "restaurantId": "Integer",
+                            "restaurantId": "Integer"
                         }
                     ],
                     "amount": "Double",
