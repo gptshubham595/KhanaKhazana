@@ -8,6 +8,9 @@ public class ProfileResponse {
     private String mobile;
     private String role;
 
+    private String message;
+    private boolean flag;
+
     public String getMessage() {
         return message;
     }
@@ -23,9 +26,6 @@ public class ProfileResponse {
     public void setFlag(boolean flag) {
         this.flag = flag;
     }
-
-    private String message;
-    private boolean flag;
 
     public String getUsername() {
         return username;

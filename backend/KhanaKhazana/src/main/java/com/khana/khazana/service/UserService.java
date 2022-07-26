@@ -7,11 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+
 @Service
 public class UserService {
     
-    public static boolean isLoggedIn = false;
-    public static  String currRole = "customer";
+    public static HashMap<Long,Boolean> isLoggedIn;
+    public static  HashMap<Long,String> currRole;
 
     @Autowired
     UserRepository userRepository;
