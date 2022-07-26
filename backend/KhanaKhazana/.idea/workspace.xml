@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6397116e-2f69-4713-ad13-671285e5e1dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26-07-2022_16_25_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26-07-2022_16_25_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26-07-2022_16_25__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/khana/khazana/KhanaKhazana.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/khana/khazana/configure/WebSecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/khana/khazana/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/khana/khazana/model/SignUpResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/khana/khazana/model/Users.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/khanaKhazana Admin.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/khanaKhazana RestaurantManager.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/khanaKhazanaCustomer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/khana/khazana/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/controller/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/khana/khazana/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/khana/khazana/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/khana/khazana/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/repository/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
