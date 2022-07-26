@@ -23,3 +23,7 @@ This is a system designed in Spring Boot Microservices architecture to provide R
 ## User Flow Diagram
  
  <img src="./Diagrams/Flow%20Diagram.png">
+
+## DB Schema
+ 
+ <img src="./Diagrams/DB%20Schema.png">
