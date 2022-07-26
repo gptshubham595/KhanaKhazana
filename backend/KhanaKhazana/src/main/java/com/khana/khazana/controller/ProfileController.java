@@ -19,17 +19,23 @@ public class ProfileController {
     UserRepository userRepository;
 
     @PostMapping(value = "/profile",consumes = "application/json",produces = "application/json")
-    public ResponseEntity<ProfileResponse> getProfileData(@RequestBody Long userid){
+    public ResponseEntity<ProfileResponse> getProfileData(@RequestBody Long userId){
         ProfileResponse profileResponse = new ProfileResponse();
-        Users userData=userRepository.findByUserId(userid);
+        if(userId==null){
+            return new ResponseEntity<>(profileResponse,HttpStatus.BAD_REQUEST);
+        }
+        Users userData=userRepository.findByUserId(userId);
         if(userData!=null){
             profileResponse.setUsername(userData.getUsername());
             profileResponse.setEmail(userData.getEmail());
             profileResponse.setMobile(userData.getMobile());
             profileResponse.setAddress(userData.getAddress());
-//            profileResponse.setUserPic(user);
-        }else{
+            profileResponse.setUserPic(userData.getProfilePic());
 
+            profileResponse.setFlag(true);
+            profileResponse.setMessage("Profile Fetched Successfully");
+        }else{
+            profileResponse=null;
         }
         return new ResponseEntity<>(profileResponse, HttpStatus.OK);
     }
