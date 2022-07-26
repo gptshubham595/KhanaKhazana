@@ -6,6 +6,7 @@ CREATE TABLE `Users` (
 	`email` varchar(255) NOT NULL UNIQUE,
 	`role` varchar(255) NOT NULL,
 	`address` varchar(255) NOT NULL,
+	`profilePic` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -16,6 +17,7 @@ CREATE TABLE `Restaurant` (
 	`restaurantRating` FLOAT NOT NULL DEFAULT '1',
 	`restaurantAddr` varchar(255) NOT NULL,
 	`managerId` varchar(255) NOT NULL,
+	`restaurantLogo` varchar(255) NOT NULL,
 	PRIMARY KEY (`restaurantId`)
 );
 
@@ -55,6 +57,7 @@ CREATE TABLE `Food` (
 	`foodCost` double NOT NULL,
 	`restaurantId` bigint NOT NULL,
 	`inStock` BOOLEAN NOT NULL,
+	`foodImage` varchar(255) NOT NULL,
 	PRIMARY KEY (`foodId`)
 );
 
