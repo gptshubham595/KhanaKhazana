@@ -5,159 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6397116e-2f69-4713-ad13-671285e5e1dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/BackendTraining.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/NewPackage/Burger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/NewPackage/BurgerFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/NewPackage/Calculator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/NewPackage/CheeseBurger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/NewPackage/ChickenBurger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/NewPackage/Demo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/NewPackage/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/NewPackage/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/NewPackage/VegBurger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/Package2/Calculator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/out/production/BackendTraining/Package3/MainClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/src/NewPackage/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/src/NewPackage/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/src/Package2/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../BackendTraining/src/Package3/MainClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/GhareluMartApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/configure/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/controller/SellerCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/model/Invoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/model/Items.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/model/Seller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/model/SignupResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/repository/SellerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/java/com/gharelumart/mainpackage/service/SellerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/resources/Design.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/Design.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/GhareluMartApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/configure/WebSecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/controller/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/controller/SellerCustomer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/model/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/model/Invoice.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/model/Items.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/model/Seller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/model/SignupResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/repository/CustomerRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/repository/SellerRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/service/CustomerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../GhareluMart/target/classes/com/gharelumart/mainpackage/service/SellerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/model/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/src/main/java/com/example/social/SocialMediaApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/src/main/java/com/example/social/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/src/main/java/com/example/social/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/src/main/java/com/example/social/model/PostRequestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/src/main/java/com/example/social/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/src/main/java/com/example/social/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/target/classes/com/example/social/SocialMediaApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/target/classes/com/example/social/controller/BST.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/target/classes/com/example/social/controller/HomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/target/classes/com/example/social/controller/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/target/classes/com/example/social/controller/StudentInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/target/classes/com/example/social/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/target/classes/com/example/social/model/PostRequestData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SpringbootTraining/target/classes/com/example/social/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/BlogApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/configure/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/controller/ArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/controller/PostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/model/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/model/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/model/LoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/model/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/model/PostArticleResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/model/SignupResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/repository/ArticleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/repository/PostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/service/ArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/java/com/blogger/mainpackage/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/resources/Ecommerce.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/resources/Signup.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/Ecommerce.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/Signup.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/BlogApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/configure/WebSecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/controller/ArticleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/controller/PostController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/model/Article.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/model/LoginRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/model/LoginResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/model/Post.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/model/PostArticleResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/model/SignupResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/repository/ArticleRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/repository/PostRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/repository/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/service/ArticleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../SuperProject/target/classes/com/blogger/mainpackage/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Training.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/Alex.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/AttackAbility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/AttackWithGuns.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/AttackWithHands.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/CantFly.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/Demo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/FlyAbility.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/Player.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/Sam.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/WithJetPack.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/out/production/systemdesign/newpackage/WithWings.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/src/newpackage/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../systemdesign/systemdesign.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/khana/khazana/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/khana/khazana/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,19 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Training/OLAGRP9/backend/KhanaKhazana",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
-  }
-}]]></component>
+  <component name="RunManager">
+    <configuration name="KhanaKhazana" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.khana.khazana.KhanaKhazana" />
+      <module name="KhanaKhazana" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.khana.khazana.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.KhanaKhazana" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
