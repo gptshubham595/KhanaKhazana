@@ -2,6 +2,7 @@ package com.khana.khazana.service;
 
 import com.khana.khazana.model.LoginRequest;
 import com.khana.khazana.model.LoginResponse;
+import com.khana.khazana.model.SessionToken;
 import com.khana.khazana.model.SignUpResponse;
 import com.khana.khazana.model.Users;
 import com.khana.khazana.repository.UserRepository;
@@ -10,11 +11,13 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+
 @Service
 public class UserService {
     
-    public static boolean isLoggedIn = false;
-    public static  String currRole = "customer";
+    public static HashMap<Long,HashMap<SessionToken,HashMap<String,Boolean>>> userIdTokenRoleisLoggedIn;
+//    public static  HashMap<Long,String> currRole;
 
     @Autowired
     UserRepository userRepository;
