@@ -16,7 +16,7 @@ import java.util.HashMap;
 @Service
 public class UserService {
 
-    //    public static  HashMap<Long,String> currRole;
+    // public static HashMap<Long,String> currRole;
     @Value("${pepper}")
     String pepper;
     @Autowired
@@ -25,9 +25,9 @@ public class UserService {
     private HashMap<Long, HashMap<String, HashMap<String, Boolean>>> userIdTokenRoleisLoggedIn;
 
     public void removeLoggedInUser(Long userId) {
-        try{
-        userIdTokenRoleisLoggedIn.remove(userId);}
-        catch(Exception e){
+        try {
+            userIdTokenRoleisLoggedIn.remove(userId);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -41,10 +41,9 @@ public class UserService {
         userIdTokenRoleisLoggedIn.put(userId, TokenRoleisLoggedIn);
     }
 
-
     public LoginResponse authenticate(LoginRequest loginRequest) {
         Users user = userRepository.findByEmail(loginRequest.getEmail());
-        userIdTokenRoleisLoggedIn=new HashMap<>();
+        userIdTokenRoleisLoggedIn = new HashMap<>();
         LoginResponse loginResponse = new LoginResponse();
         if (user == null) {
             loginResponse.setStatus(false);
@@ -58,12 +57,12 @@ public class UserService {
             loginResponse.setToken(token);
             loginResponse.setRole(user.getRole());
 
-//            System.out.println(userIdTokenRoleisLoggedIn.toString());
+            // System.out.println(userIdTokenRoleisLoggedIn.toString());
             saveLoggedInUser(user.getUserId(), token, user.getRole());
-//            System.out.println(userIdTokenRoleisLoggedIn.toString());
+            // System.out.println(userIdTokenRoleisLoggedIn.toString());
 
-//            currRole = user.getRole();
-//            isLoggedIn = true;
+            // currRole = user.getRole();
+            // isLoggedIn = true;
         } else {
             loginResponse.setStatus(false);
             loginResponse.setMessage("Invalid Password" + BCrypt.hashpw(loginRequest.getPassword(), user.getSalt()));
@@ -71,7 +70,6 @@ public class UserService {
 
         return loginResponse;
     }
-
 
     public SignUpResponse Register(Users user) {
         Users currentUser = userRepository.findByEmail(user.getEmail());
@@ -107,4 +105,3 @@ public class UserService {
         removeLoggedInUser(userId);
     }
 }
-
