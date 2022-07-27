@@ -13,7 +13,7 @@ public class Users {
     private String username;
     //username is person name
 
-    @Column(nullable=false, unique = false)
+    @Column(nullable=false,length=255)
     //removed length since it was creating an issue while storing encrypted password
     private String password;
 
