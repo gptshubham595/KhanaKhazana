@@ -23,7 +23,7 @@ public class Users {
     @Column(nullable=false, length=10, unique = true)
     private String mobile;
 
-    @Column(nullable=false, length=20, unique = false)
+    @Column(nullable=false, length=20)
     private String role;
 
     @Column(length=255)
