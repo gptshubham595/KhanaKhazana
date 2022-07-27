@@ -12,7 +12,9 @@ public class Users {
     @Column(nullable=false, length=20)
     private String username;
     //username is person name
-    @Column(nullable=false, length=20, unique = false)
+
+    @Column(nullable=false, unique = false)
+    //removed length since it was creating an issue while storing encrypted password
     private String password;
 
     @Column(nullable=false, length=50, unique = true)
@@ -38,10 +40,6 @@ public class Users {
 
     public void setSalt(String salt) {
         this.salt = salt;
-    }
-
-    public long getUserId() {
-        return userId;
     }
 
     public long getUserId() {

@@ -270,7 +270,12 @@
         "endpoint": "profile",
         "path": "/profile",
         "method": "POST",
-        "request:data": {},
+        "request:data": {
+            "userid":{
+                "type":"String",
+                "required":true
+            }
+        },
         "response": {
             "http-status": 200,
             "response:data": {
