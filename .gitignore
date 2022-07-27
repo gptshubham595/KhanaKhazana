@@ -1,7 +1,7 @@
 backend/KhanaKhazana/.idea
 backend/KhanaKhazana/pom.xml
 backend/KhanaKhazana/target
-backend/build
+backend/KhanaKhazana/build
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
