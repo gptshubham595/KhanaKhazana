@@ -1,8 +1,8 @@
 package com.khana.khazana.model;
 
-public class LoginResponse {
+public class LogoutResponse {
     private boolean status;
-    private String Message;
+    private String message;
 
     public boolean isStatus() {
         return status;
@@ -13,10 +13,10 @@ public class LoginResponse {
     }
 
     public String getMessage() {
-        return Message;
+        return message;
     }
 
     public void setMessage(String message) {
-        Message = message;
+        this.message = message;
     }
 }
