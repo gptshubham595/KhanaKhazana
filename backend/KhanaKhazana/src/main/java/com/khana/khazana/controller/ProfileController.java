@@ -6,7 +6,7 @@ import com.khana.khazana.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +16,7 @@ public class ProfileController {
     @Autowired
     ProfileService profileService;
 
-    @GetMapping(value = "/profile", consumes = "application/json", produces = "application/json")
+    @PostMapping(value = "/profile", consumes = "application/json", produces = "application/json")
     public ResponseEntity<ProfileResponse> getProfileData(@RequestBody ProfileRequest profileRequest) {
         ProfileResponse profileResponse = profileService.getProfileData(profileRequest);
         if (profileResponse.isFlag()) {
