@@ -48,5 +48,4 @@ public class UserController {
     public void Logout(@RequestBody LogoutRequest logoutRequest) {
         userService.Logout(logoutRequest.getUserId());
     }
-
 }
