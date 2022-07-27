@@ -33,8 +33,8 @@ public class UserService {
         else if((BCrypt.hashpw(loginRequest.getPassword(), user.getSalt())).equals(user.getPassword())){
             loginResponse.setStatus(true);
             loginResponse.setMessage("Login Successful");
-            currRole = user.getRole();
-            isLoggedIn = true;
+//            currRole = user.getRole();
+//            isLoggedIn = true;
         }
         else{
             loginResponse.setStatus(false);
