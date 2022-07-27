@@ -16,6 +16,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
+
     @PostMapping(value = "/login", consumes = "application/json", produces = "application/json")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest) {
         try {
@@ -54,7 +55,6 @@ public class UserController {
         help.setContactCompany("KhanaKhazana");
         return new ResponseEntity<>(help, HttpStatus.OK);
     }
-
     @PostMapping(value = "/logout", consumes = "application/json", produces = "application/json")
     public void Logout(@RequestBody LogoutRequest logoutRequest) {
         userService.Logout(logoutRequest.getUserId());

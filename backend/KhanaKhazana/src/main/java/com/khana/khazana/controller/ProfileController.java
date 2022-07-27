@@ -25,4 +25,5 @@ public class ProfileController {
             return new ResponseEntity<>(profileResponse, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
 }
