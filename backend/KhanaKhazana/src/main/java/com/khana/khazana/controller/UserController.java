@@ -17,19 +17,17 @@ public class UserController {
 
     @PostMapping(value = "/login", consumes = "application/json", produces = "application/json")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest) {
-        LoginResponse loginResponse = userService.authenticate(loginRequest);
-         return new ResponseEntity<>(loginResponse, HttpStatus.INTERNAL_SERVER_ERROR);
-//        try {
-//            LoginResponse loginResponse = userService.authenticate(loginRequest);
-//            if (loginResponse.isStatus()) {
-//                return new ResponseEntity<>(loginResponse, HttpStatus.OK);
-//            } else {
-//                return new ResponseEntity<>(loginResponse, HttpStatus.BAD_REQUEST);
-//            }
-//        } catch (Exception e) {
-//            LoginResponse loginResponse = null;
-//            return new ResponseEntity<>(loginResponse, HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
+        try {
+            LoginResponse loginResponse = userService.authenticate(loginRequest);
+            if (loginResponse.isStatus()) {
+                return new ResponseEntity<>(loginResponse, HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(loginResponse, HttpStatus.BAD_REQUEST);
+            }
+        } catch (Exception e) {
+            LoginResponse loginResponse = null;
+            return new ResponseEntity<>(loginResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @PostMapping(value = "/signup", consumes = "application/json", produces = "application/json")
@@ -50,5 +48,4 @@ public class UserController {
     public void Logout(@RequestBody LogoutRequest logoutRequest) {
         userService.Logout(logoutRequest.getUserId());
     }
-
 }
