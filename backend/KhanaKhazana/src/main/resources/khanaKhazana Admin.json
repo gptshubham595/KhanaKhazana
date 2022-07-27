@@ -38,8 +38,8 @@
         }
     },
     {
-        "endpoint": "showAllUserOrder",
-        "path": "/showAllUser/userId={}",
+        "endpoint": "showOrders",
+        "path": "/showOrders/userId={}",
         "method": "GET",
         "request:data": {
             "UserId": "long"
