@@ -1,8 +1,6 @@
 package com.khana.khazana.controller;
 
-import com.khana.khazana.model.DefaultResponse;
-import com.khana.khazana.model.Food;
-import com.khana.khazana.model.Restaurant;
+import com.khana.khazana.model.*;
 import com.khana.khazana.service.RestaurantManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,5 +32,22 @@ public class RestaurantManagerController {
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
         }
     }
-
+    @PostMapping(value = "/deleteFoodItem", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<DefaultResponse> deleteFoodItem(@RequestBody DeleteFoodRequest deleteFoodRequest) {
+        DefaultResponse response = restaurantManagerService.deleteFood(deleteFoodRequest);
+        if (response.isStatus()) {
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        }
+    }
+    @PostMapping(value = "/updateFoodItem", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<DefaultResponse> updateFoodItem(@RequestBody UpdateFoodRequest updateFoodRequest) {
+        DefaultResponse response = restaurantManagerService.updateFood(updateFoodRequest);
+        if (response.isStatus()) {
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        }
+    }
 }
