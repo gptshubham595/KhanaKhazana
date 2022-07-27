@@ -27,7 +27,6 @@ public class RestaurantManagerController {
     }
     @PostMapping(value = "/addFoodItem", consumes = "application/json", produces = "application/json")
     public ResponseEntity<DefaultResponse> addFoodItem(@RequestBody Food addFoodRequest) {
-
         DefaultResponse response = restaurantManagerService.addFood(addFoodRequest);
         if (response.isStatus()) {
             return new ResponseEntity<>(response, HttpStatus.OK);
