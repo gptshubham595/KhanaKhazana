@@ -42,9 +42,18 @@ public class UserService {
     }
 
     public LoginResponse authenticate(LoginRequest loginRequest) {
-        Users user = userRepository.findByEmail(loginRequest.getEmail());
+
         userIdTokenRoleisLoggedIn = new HashMap<>();
         LoginResponse loginResponse = new LoginResponse();
+
+        Users user = userRepository.findByEmail(loginRequest.getEmail());
+        if (userIdTokenRoleisLoggedIn.containsKey(user.getUserId())) {
+            loginResponse.setStatus(false);
+            loginResponse.setToken(null);
+            loginResponse.setRole("customer");
+            loginResponse.setMessage("Logout first!");
+            return loginResponse;
+        }
         if (user == null) {
             loginResponse.setStatus(false);
             loginResponse.setToken(null);
@@ -57,12 +66,7 @@ public class UserService {
             loginResponse.setToken(token);
             loginResponse.setRole(user.getRole());
 
-            // System.out.println(userIdTokenRoleisLoggedIn.toString());
             saveLoggedInUser(user.getUserId(), token, user.getRole());
-            // System.out.println(userIdTokenRoleisLoggedIn.toString());
-
-            // currRole = user.getRole();
-            // isLoggedIn = true;
         } else {
             loginResponse.setStatus(false);
             loginResponse.setMessage("Invalid Password" + BCrypt.hashpw(loginRequest.getPassword(), user.getSalt()));
@@ -85,13 +89,16 @@ public class UserService {
             user.setPassword(hashedPassword);
             user.setSalt(salt);
             String role = "customer";
-            if (user.getRole() == null || !(user.getRole().equals("customer") || user.getRole().equals("manager"))) {
+            if (user.getRole() == null) {
                 role = "customer";
+            }else if (user.getRole().equals("admin")) {
+                role = "customer";
+            }else if(!user.getRole().equals("customer") && !user.getRole().equals("manager")) {
+                role="customer";
+            }else{
+                role=user.getRole();
             }
 
-            if (user.getRole().equals("admin")) {
-                role = "customer";
-            }
             user.setRole(role);
 
             userRepository.save(user);

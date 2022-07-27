@@ -33,7 +33,7 @@ public class UserController {
     @PostMapping(value = "/signup", consumes = "application/json", produces = "application/json")
     public ResponseEntity<SignUpResponse> signUp(@RequestBody Users user) {
 
-        if (user.getRole() == null || user.getRole().equals("customer") || user.getRole().equals("restaurant")) {
+        if (user.getRole() == null || user.getRole().equals("customer") || user.getRole().equals("manager")) {
             SignUpResponse signUpResponse = userService.Register(user);
             return new ResponseEntity<>(signUpResponse, HttpStatus.OK);
         } else {

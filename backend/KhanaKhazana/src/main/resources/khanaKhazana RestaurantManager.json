@@ -1,5 +1,52 @@
 [
     {
+        "endpoint": "addRestaurant",
+        "path": "/addRestaurant",
+        "method": "POST",
+        "request:data": {
+            "restaurantName": {
+                "type": "String",
+                "max": 30,
+                "required": true
+            },
+            "restaurantDescription": {
+                "type": "String",
+                "max": 255,
+                "required": true
+            },
+            "restaurantRating": {
+                "type": "Double",
+                "required": true
+            },
+            "restaurantAddress": {
+                "type": "String",
+                "max": 255,
+                "required": true
+            },
+            "restaurantImage": {
+                "type": "String",
+                "required": true
+            },
+            "managerId": {
+                "type": "String",
+                "required": true
+            }
+        },
+        "response": {
+            "http-status": 200,
+            "response:data": {
+                "success": {
+                    "flag": true,
+                    "message": "Added Successfully!"
+                },
+                "error": {
+                    "flag": false,
+                    "data": "Update failed"
+                }
+            }
+        }
+    },
+    {
         "endpoint": "addItem",
         "path": "/addItem",
         "method": "POST",
