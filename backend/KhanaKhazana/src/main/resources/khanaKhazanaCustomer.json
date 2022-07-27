@@ -159,7 +159,7 @@
                             "foodName": "String",
                             "foodImage": "String",
                             "foodDescription": "String",
-                            "foodType": "Boolean",
+                            "foodType": "String",
                             "foodId": "Integer",
                             "inStock":"boolean"
                         }

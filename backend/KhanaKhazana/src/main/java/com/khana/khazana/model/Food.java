@@ -22,8 +22,18 @@ public class Food {
     private String foodPic;
 
     @Column(nullable = false)
-    private boolean foodType;
+    private String foodType;
     // False for VEG True for NONVEG
+    @Column(nullable = false)
+    private Long restaurantId;
+
+    public Long getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(Long restaurantId) {
+        this.restaurantId = restaurantId;
+    }
 
     public Long getFoodId() {
         return foodId;
@@ -65,11 +75,11 @@ public class Food {
         this.foodPic = foodPic;
     }
 
-    public boolean isFoodType() {
+    public String getFoodType() {
         return foodType;
     }
 
-    public void setFoodType(boolean foodType) {
+    public void setFoodType(String foodType) {
         this.foodType = foodType;
     }
 }
