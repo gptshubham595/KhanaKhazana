@@ -1,24 +1,42 @@
 package com.khana.khazana.service;
 
-import com.khana.khazana.model.DefaultResponse;
-import com.khana.khazana.model.Invoice;
-import com.khana.khazana.model.InvoiceResponse;
+import com.khana.khazana.model.*;
+import com.khana.khazana.repository.CouponRepository;
 import com.khana.khazana.repository.InvoiceRepository;
+import com.khana.khazana.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+import static com.khana.khazana.service.UserService.isLoggedIn;
 
 @Service
 public class InvoiceService {
 
     @Autowired
     InvoiceRepository invoiceRepository;
+    UserRepository userRepository;
+    CouponRepository couponRepository;
+    public boolean UserExistsInDB(long userId){
+        Users user = userRepository.findByUserId(userId);
+        if(user==null || !user.getRole().equals("admin")){
+            return false;
+        }
+
+        return true;
+    }
 
     public DefaultResponse SaveOrderInfo(Invoice invoice){
         DefaultResponse defaultResponse = new DefaultResponse();
+
         try{
+            Coupon coupon = couponRepository.findByCouponString(invoice.getCoupon());
+            double amount = invoice.getFoodQty()*invoice.getFoodCost() - coupon.getCouponAmt()>0?(invoice.getFoodQty()*invoice.getFoodCost() - coupon.getCouponAmt()):0;
+            invoice.setFoodCost(amount);
+            
             invoiceRepository.save(invoice);
+
             defaultResponse.setStatus(true);
             defaultResponse.setMessage("Order info saved");
         }catch (Exception e){
@@ -29,10 +47,20 @@ public class InvoiceService {
         return defaultResponse;
     }
 
-    public InvoiceResponse GenerateInvoice(long userId) {
-        List<Invoice> OrderHistory =  invoiceRepository.findAllByuserIdOrderBytimestampDesc(userId);
+    public InvoiceResponse GenerateInvoice(WhichUserRequest whichUserRequest) {
+        WhichUserResponse whichUserResponse = isLoggedIn(whichUserRequest);
+        boolean userExistsInDB = UserExistsInDB(whichUserRequest.getUserId());
         InvoiceResponse invoiceResponse = new InvoiceResponse();
-        invoiceResponse.setEntries(OrderHistory);
+        if(whichUserResponse.isStatus() && userExistsInDB){
+            List<Invoice> OrderHistory =  invoiceRepository.findAllByuserIdOrderBytimestampDesc(whichUserRequest.getUserId());
+            invoiceResponse.setEntries(OrderHistory);
+            invoiceResponse.setStatus(true);
+        }
+        else{
+            invoiceResponse.setEntries(null);
+            invoiceResponse.setStatus(false);
+        }
+
         return invoiceResponse;
     }
 }

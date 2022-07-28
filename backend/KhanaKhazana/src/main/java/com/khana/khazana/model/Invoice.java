@@ -34,5 +34,7 @@ public class Invoice {
     @Column(nullable = false)
     private String deliveryAddress;
 
+    private String coupon;
+
 
 }

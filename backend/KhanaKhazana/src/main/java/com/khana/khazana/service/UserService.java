@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.HashMap;
 
@@ -161,7 +162,20 @@ public class UserService {
         }
     }
 
-    public void Logout(Long userId) {
-        removeLoggedInUser(userId);
+    public DefaultResponse Logout(WhichUserRequest whichUserRequest) {
+        WhichUserResponse whichUserResponse = isLoggedIn(whichUserRequest);
+        DefaultResponse defaultResponse = new DefaultResponse();
+        if(whichUserResponse.isStatus()){
+            removeLoggedInUser(whichUserRequest.getUserId());
+            defaultResponse.setStatus(true);
+            defaultResponse.setMessage("See you soon.");
+        }
+        else{
+            defaultResponse.setStatus(false);
+            defaultResponse.setMessage("Invalid Breach");
+        }
+
+        return defaultResponse;
+
     }
 }
