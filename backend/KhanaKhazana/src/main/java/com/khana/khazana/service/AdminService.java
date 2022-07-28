@@ -15,20 +15,20 @@ public class AdminService {
     @Autowired
     RestaurantRepository restaurantRepository;
 
-    public ShowAllCustomerResponse AllCustomer(){
-        ShowAllCustomerResponse showAllCustomerResponse = new ShowAllCustomerResponse();
+    public ShowAllUsersResponse AllCustomer(){
+        ShowAllUsersResponse showAllUsersResponse = new ShowAllUsersResponse();
         List<Users> listOfUsers = adminRespository.findAllByRole("customer");
-        showAllCustomerResponse.setEntries(listOfUsers);
+        showAllUsersResponse.setEntries(listOfUsers);
 
-        return showAllCustomerResponse;
+        return showAllUsersResponse;
     }
 
-    public ShowAllCustomerResponse AllManager(){
-        ShowAllCustomerResponse showAllCustomerResponse = new ShowAllCustomerResponse();
+    public ShowAllUsersResponse AllManager(){
+        ShowAllUsersResponse showAllUsersResponse = new ShowAllUsersResponse();
         List<Users> listOfManagers = adminRespository.findAllByRole("manager");
-        showAllCustomerResponse.setEntries(listOfManagers);
+        showAllUsersResponse.setEntries(listOfManagers);
 
-        return showAllCustomerResponse;
+        return showAllUsersResponse;
     }
 
     public FetchRestaurantResponse AllRestaurant(){

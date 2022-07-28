@@ -7,20 +7,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 public class AdminController {
 
     @Autowired
     AdminService adminService;
     @GetMapping(value = "/showAllCustomer")
-    public ResponseEntity<ShowAllCustomerResponse> DisplayAllUsers(){
+    public ResponseEntity<ShowAllUsersResponse> DisplayAllUsers(){
         return new ResponseEntity<>(adminService.AllCustomer(), HttpStatus.OK);
     }
 
     @GetMapping(value = "/showAllManager")
-    public ResponseEntity<ShowAllCustomerResponse> DisplayAllManagers(){
+    public ResponseEntity<ShowAllUsersResponse> DisplayAllManagers(){
         return new ResponseEntity<>(adminService.AllManager(), HttpStatus.OK);
     }
 
