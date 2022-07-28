@@ -1,0 +1,162 @@
+[
+    {
+        "endpoint": "addRestaurant",
+        "path": "/addRestaurant",
+        "method": "POST",
+        "request:data": {
+            "restaurantName": {
+                "type": "String",
+                "max": 30,
+                "required": true
+            },
+            "restaurantDescription": {
+                "type": "String",
+                "max": 255,
+                "required": true
+            },
+            "restaurantRating": {
+                "type": "Double",
+                "required": true
+            },
+            "restaurantAddress": {
+                "type": "String",
+                "max": 255,
+                "required": true
+            },
+            "restaurantImage": {
+                "type": "String",
+                "required": true
+            },
+            "managerId": {
+                "type": "String",
+                "required": true
+            }
+        },
+        "response": {
+            "http-status": 200,
+            "response:data": {
+                "success": {
+                    "flag": true,
+                    "message": "Added Successfully!"
+                },
+                "error": {
+                    "flag": false,
+                    "data": "Update failed"
+                }
+            }
+        }
+    },
+    {
+        "endpoint": "addItem",
+        "path": "/addItem",
+        "method": "POST",
+        "request:data": {
+            "foodTitle": {
+                "type": "String",
+                "max": 30,
+                "required": true
+            },
+            "foodDesc": {
+                "type": "String",
+                "max": 255,
+                "required": true
+            },
+            "foodCost": {
+                "type": "Double",
+                "required": true
+            },
+            "foodPic": {
+                "type": "String",
+                "max": 255,
+                "required": true
+            },
+            "foodType": {
+                "type": "boolean",
+                "required": true
+            }
+        },
+        "response": {
+            "http-status": 200,
+            "response:data": {
+                "success": {
+                    "flag": true,
+                    "message": "Added Successfully!"
+                },
+                "error": {
+                    "flag": false,
+                    "data": "Update failed"
+                }
+            }
+        }
+    },
+    {
+        "endpoint": "deleteItem",
+        "path": "/deleteItem",
+        "method": "POST",
+        "request:data": {
+            "foodId": {
+                "type": "integer",
+                "required": true
+            }
+        },
+        "response": {
+            "http-status": 200,
+            "response:data": {
+                "success": {
+                    "flag": true,
+                    "message": "deleted Successfully!"
+                },
+                "error": {
+                    "flag": false,
+                    "data": "Update failed"
+                }
+            }
+        }
+    },
+    {
+        "endpoint": "updateItem",
+        "path": "/updateItem",
+        "method": "POST",
+        "request:data": {
+            "foodId": {
+                "type": "integer",
+                "required": true
+            },
+            "foodTitle": {
+                "type": "String",
+                "required": false
+            },
+            "foodDesc": {
+                "type": "String",
+                "max": 255,
+                "required": true
+            },
+            "foodCost": {
+                "type": "Double",
+                "required": true
+            },
+            "foodPic": {
+                "type": "String",
+                "max": 255,
+                "required": true
+            },
+            "foodType": {
+                "type": "boolean",
+                "required": true
+            }
+        },
+        "response": {
+            "http-status": 200,
+            "response:data": {
+                "success": {
+                    "flag": true,
+                    "message": "updated Successfully!"
+                },
+                "error": {
+                    "flag": false,
+                    "data": "Update failed"
+                }
+            }
+        }
+    }
+]
