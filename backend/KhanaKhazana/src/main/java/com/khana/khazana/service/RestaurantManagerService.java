@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Objects;
 
+import static com.khana.khazana.service.UserService.isLoggedIn;
+
 @Service
 public class RestaurantManagerService {
     @Autowired
@@ -21,11 +23,26 @@ public class RestaurantManagerService {
     @Autowired
     FoodRepository foodRepository;
 
-    public DefaultResponse addRestaurant(Restaurant addRestaurantRequest) {
+    public void AddRestaurantEntries(RestaurantUtility restaurantUtility){
+        Restaurant restaurant = new Restaurant();
+        restaurant.setManagerId(restaurantUtility.getManagerId());
+        restaurant.setRestaurantId(restaurantUtility.getRestaurantId());
+        restaurant.setRestaurantRating(restaurantUtility.getRestaurantRating());
+        restaurant.setRestaurantAddress(restaurantUtility.getRestaurantAddress());
+        restaurant.setRestaurantDescription(restaurantUtility.getRestaurantDescription());
+        restaurant.setRestaurantImage(restaurantUtility.getRestaurantImage());
+        restaurant.setRestaurantName(restaurantUtility.getRestaurantName());
+
+        restaurantRepository.save(restaurant);
+    }
+    public DefaultResponse addRestaurant(RestaurantUtility addRestaurantRequest) {
         boolean currRestaurant = restaurantRepository.existsByRestaurantId(addRestaurantRequest.getRestaurantId());
         Users user = userRepository.findByUserId(addRestaurantRequest.getManagerId());
-
         DefaultResponse response = new DefaultResponse();
+        WhichUserRequest whichUserRequest = new WhichUserRequest();
+        whichUserRequest.setUserId(addRestaurantRequest.getManagerId());
+        whichUserRequest.setToken(addRestaurantRequest.getToken());
+        WhichUserResponse whichUserResponse = isLoggedIn(whichUserRequest);
 
         if (currRestaurant) {
             response.setStatus(false);
@@ -33,10 +50,11 @@ public class RestaurantManagerService {
         } else if (user == null) {
             response.setStatus(false);
             response.setMessage("Manager doesn't exists");
-        } else if (user.getRole().equals("manager")) {
+        } else if (user.getRole().equals("manager") && whichUserResponse.isStatus()) {
             addRestaurantRequest.setRestaurantRating(1.0);
             addRestaurantRequest.setManagerId(user.getUserId());
-            restaurantRepository.save(addRestaurantRequest);
+
+            AddRestaurantEntries(addRestaurantRequest);
             response.setStatus(true);
             response.setMessage("Restaurants added successfully");
         } else {
