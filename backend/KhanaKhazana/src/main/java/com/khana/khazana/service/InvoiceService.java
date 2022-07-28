@@ -30,7 +30,7 @@ public class InvoiceService {
     }
 
     public InvoiceResponse GenerateInvoice(long userId) {
-        List<Invoice> OrderHistory =  invoiceRepository.findAllByuserId(userId);
+        List<Invoice> OrderHistory =  invoiceRepository.findAllByuserIdOrderBytimestampDesc(userId);
         InvoiceResponse invoiceResponse = new InvoiceResponse();
         invoiceResponse.setEntries(OrderHistory);
         return invoiceResponse;
