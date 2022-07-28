@@ -7,16 +7,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.HashMap;
 
 @Service
 public class UserService {
 
-    UserService(){
-        userIdTokenRoleisLoggedIn = new HashMap<>();
-    }
     private static HashMap<Long, HashMap<String, HashMap<Users, Boolean>>> userIdTokenRoleisLoggedIn;
     // public static HashMap<Long,String> currRole;
     @Value("${pepper}")
@@ -24,6 +20,9 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
     BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(16);
+    UserService() {
+        userIdTokenRoleisLoggedIn = new HashMap<>();
+    }
 
     public static WhichUserResponse isLoggedIn(WhichUserRequest whichUserRequest) {
         WhichUserResponse whichUserResponse = new WhichUserResponse();
@@ -32,23 +31,29 @@ public class UserService {
             whichUserResponse.setMessage("user is not logged in");
             return whichUserResponse;
         }
-        HashMap.Entry<String, HashMap<Users, Boolean>> entry = userIdTokenRoleisLoggedIn.get(whichUserRequest.getUserId()).entrySet().iterator().next();
-        String token = entry.getKey();
-        if (token.equals(whichUserRequest.getToken())) {
-            HashMap<Users, Boolean> roleIsLoggedIn = entry.getValue();
-            if (roleIsLoggedIn.entrySet().iterator().next().getValue() == null) {
-                whichUserResponse.setStatus(false);
-                whichUserResponse.setMessage("user is not logged in");
-            }
-            whichUserResponse.setStatus(roleIsLoggedIn.entrySet().iterator().next().getValue());
-            if (roleIsLoggedIn.entrySet().iterator().next().getValue()) {
-                whichUserResponse.setMessage("user is logged in");
+        try {
+            HashMap.Entry<String, HashMap<Users, Boolean>> entry = userIdTokenRoleisLoggedIn.get(whichUserRequest.getUserId()).entrySet().iterator().next();
+            String token = entry.getKey();
+            if (token.equals(whichUserRequest.getToken())) {
+                HashMap<Users, Boolean> roleIsLoggedIn = entry.getValue();
+                if (roleIsLoggedIn.entrySet().iterator().next().getValue() == null) {
+                    whichUserResponse.setStatus(false);
+                    whichUserResponse.setMessage("user is not logged in");
+                }
+                whichUserResponse.setStatus(roleIsLoggedIn.entrySet().iterator().next().getValue());
+                if (roleIsLoggedIn.entrySet().iterator().next().getValue()) {
+                    whichUserResponse.setMessage("user is logged in");
+                } else {
+                    whichUserResponse.setMessage("user is not logged in");
+                }
             } else {
-                whichUserResponse.setMessage("user is not logged in");
+                whichUserResponse.setStatus(false);
+                whichUserResponse.setMessage("invalid token");
             }
-        } else {
+        } catch (Exception e) {
+            e.printStackTrace();
             whichUserResponse.setStatus(false);
-            whichUserResponse.setMessage("invalid token");
+            whichUserResponse.setMessage("user is not logged in");
         }
         return whichUserResponse;
     }
@@ -163,12 +168,11 @@ public class UserService {
     public DefaultResponse Logout(WhichUserRequest whichUserRequest) {
         WhichUserResponse whichUserResponse = isLoggedIn(whichUserRequest);
         DefaultResponse defaultResponse = new DefaultResponse();
-        if(whichUserResponse.isStatus()){
+        if (whichUserResponse.isStatus()) {
             removeLoggedInUser(whichUserRequest.getUserId());
             defaultResponse.setStatus(true);
             defaultResponse.setMessage("See you soon.");
-        }
-        else{
+        } else {
             defaultResponse.setStatus(false);
             defaultResponse.setMessage("Invalid Breach");
         }
