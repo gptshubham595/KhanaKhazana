@@ -1,7 +1,7 @@
 package com.khana.khazana.controller;
 
 import com.khana.khazana.model.BanUserResponse;
-import com.khana.khazana.model.ShowAllCustomerResponse;
+import com.khana.khazana.model.ShowAllUsersResponse;
 import com.khana.khazana.model.*;
 import com.khana.khazana.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
