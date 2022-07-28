@@ -1,9 +1,8 @@
 package com.khana.khazana.service;
 
-import com.khana.khazana.model.BanUserResponse;
-import com.khana.khazana.model.ShowAllCustomerResponse;
-import com.khana.khazana.model.Users;
+import com.khana.khazana.model.*;
 import com.khana.khazana.repository.AdminRespository;
+import com.khana.khazana.repository.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +12,8 @@ import java.util.List;
 public class AdminService {
     @Autowired
     AdminRespository adminRespository;
+    @Autowired
+    RestaurantRepository restaurantRepository;
 
     public ShowAllCustomerResponse AllCustomer(){
         ShowAllCustomerResponse showAllCustomerResponse = new ShowAllCustomerResponse();
@@ -22,12 +23,21 @@ public class AdminService {
         return showAllCustomerResponse;
     }
 
-    public ShowAllCustomerResponse AllRestaurant(){
+    public ShowAllCustomerResponse AllManager(){
         ShowAllCustomerResponse showAllCustomerResponse = new ShowAllCustomerResponse();
-        List<Users> listOfUsers = adminRespository.findAllByRole("restaurant");
-        showAllCustomerResponse.setEntries(listOfUsers);
+        List<Users> listOfManagers = adminRespository.findAllByRole("manager");
+        showAllCustomerResponse.setEntries(listOfManagers);
 
         return showAllCustomerResponse;
+    }
+
+    public FetchRestaurantResponse AllRestaurant(){
+
+        FetchRestaurantResponse fetchRestaurantResponse = new FetchRestaurantResponse();
+        List<Restaurant> listOfRestaurant = restaurantRepository.findAll();
+        fetchRestaurantResponse.setEntries(listOfRestaurant);
+
+        return fetchRestaurantResponse;
     }
 
 //    public Users singleuser(long id){
@@ -41,4 +51,5 @@ public class AdminService {
         banUserResponse.setMessage("User Banned");
         return banUserResponse;
     }
+
 }

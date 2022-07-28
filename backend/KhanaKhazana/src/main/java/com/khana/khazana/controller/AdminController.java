@@ -1,9 +1,6 @@
 package com.khana.khazana.controller;
 
-import com.khana.khazana.model.BanUserResponse;
-import com.khana.khazana.model.ProfileRequest;
-import com.khana.khazana.model.ShowAllCustomerResponse;
-import com.khana.khazana.model.Users;
+import com.khana.khazana.model.*;
 import com.khana.khazana.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,8 +19,13 @@ public class AdminController {
         return new ResponseEntity<>(adminService.AllCustomer(), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/showAllManager")
+    public ResponseEntity<ShowAllCustomerResponse> DisplayAllManagers(){
+        return new ResponseEntity<>(adminService.AllManager(), HttpStatus.OK);
+    }
+
     @GetMapping(value = "/showAllRestaurant")
-    public ResponseEntity<ShowAllCustomerResponse> DisplayAllRestaurants(){
+    public ResponseEntity<FetchRestaurantResponse> DisplayAllRestaurants(){
         return new ResponseEntity<>(adminService.AllRestaurant(), HttpStatus.OK);
     }
 
