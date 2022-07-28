@@ -14,6 +14,7 @@ import java.util.HashMap;
 @Service
 public class UserService {
 
+    private static HashMap<Long, HashMap<String, HashMap<Users, Boolean>>> userIdTokenRoleisLoggedIn;
     // public static HashMap<Long,String> currRole;
     @Value("${pepper}")
     String pepper;
@@ -21,8 +22,56 @@ public class UserService {
     UserRepository userRepository;
     BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(16);
 
-    private static HashMap<Long, HashMap<String, HashMap<Users, Boolean>>> userIdTokenRoleisLoggedIn;
+    public static WhichUserResponse isLoggedIn(WhichUserRequest whichUserRequest) {
+        WhichUserResponse whichUserResponse = new WhichUserResponse();
+        if (userIdTokenRoleisLoggedIn == null) {
+            whichUserResponse.setStatus(false);
+            whichUserResponse.setMessage("user is not logged in");
+            return whichUserResponse;
+        }
+        HashMap.Entry<String, HashMap<Users, Boolean>> entry = userIdTokenRoleisLoggedIn.get(whichUserRequest.getUserId()).entrySet().iterator().next();
+        String token = entry.getKey();
+        if (token.equals(whichUserRequest.getToken())) {
+            HashMap<Users, Boolean> roleIsLoggedIn = entry.getValue();
+            if (roleIsLoggedIn.entrySet().iterator().next().getValue() == null) {
+                whichUserResponse.setStatus(false);
+                whichUserResponse.setMessage("user is not logged in");
+            }
+            whichUserResponse.setStatus(roleIsLoggedIn.entrySet().iterator().next().getValue());
+            if (roleIsLoggedIn.entrySet().iterator().next().getValue()) {
+                whichUserResponse.setMessage("user is logged in");
+            } else {
+                whichUserResponse.setMessage("user is not logged in");
+            }
+        } else {
+            whichUserResponse.setStatus(false);
+            whichUserResponse.setMessage("invalid token");
+        }
+        return whichUserResponse;
+    }
 
+    public static CurrentUserResponse currentUser(WhichUserRequest whichUserRequest) {
+        WhichUserResponse whichUserResponse = isLoggedIn(whichUserRequest);
+        CurrentUserResponse currentUserResponse = new CurrentUserResponse();
+
+        if (!whichUserResponse.isStatus()) {
+            currentUserResponse.setRole("customer");
+            currentUserResponse.setStatus(false);
+            currentUserResponse.setMessage("user is not logged in ");
+            return currentUserResponse;
+        }
+
+        HashMap.Entry<String, HashMap<Users, Boolean>> entry = userIdTokenRoleisLoggedIn.get(whichUserRequest.getUserId()).entrySet().iterator().next();
+        String token = entry.getKey();
+        HashMap<Users, Boolean> roleIsLoggedIn = entry.getValue();
+        String role = roleIsLoggedIn.entrySet().iterator().next().getKey().getRole();
+
+        currentUserResponse.setRole(role);
+        currentUserResponse.setStatus(true);
+        currentUserResponse.setMessage("user is logged in ");
+
+        return currentUserResponse;
+    }
 
     public void removeLoggedInUser(Long userId) {
         try {
@@ -42,59 +91,6 @@ public class UserService {
         userIdTokenRoleisLoggedIn.put(user.getUserId(), TokenRoleisLoggedIn);
     }
 
-    public static WhichUserResponse isLoggedIn(WhichUserRequest whichUserRequest){
-        WhichUserResponse whichUserResponse = new WhichUserResponse();
-        if(userIdTokenRoleisLoggedIn == null){
-            whichUserResponse.setStatus(false);
-            whichUserResponse.setMessage("user is not logged in");
-            return whichUserResponse;
-        }
-        HashMap.Entry<String, HashMap<Users, Boolean>> entry = userIdTokenRoleisLoggedIn.get(whichUserRequest.getUserId()).entrySet().iterator().next();
-        String token = entry.getKey();
-        if(token.equals(whichUserRequest.getToken())){
-            HashMap<Users, Boolean> roleIsLoggedIn = entry.getValue();
-//            String role  = roleIsLoggedIn.entrySet().iterator().next().getKey().getRole();
-            if(roleIsLoggedIn.entrySet().iterator().next().getValue() == null){
-                whichUserResponse.setStatus(false);
-                whichUserResponse.setMessage("user is not logged in");
-            }
-            whichUserResponse.setStatus(roleIsLoggedIn.entrySet().iterator().next().getValue());
-            if(roleIsLoggedIn.entrySet().iterator().next().getValue())
-                whichUserResponse.setMessage("user is logged in");
-            else
-                whichUserResponse.setMessage("user is not logged in");
-        }else {
-            whichUserResponse.setStatus(false);
-            whichUserResponse.setMessage("invalid token");
-        }
-        return whichUserResponse;
-    }
-
-    public static CurrentUserResponse currentUser(WhichUserRequest whichUserRequest){
-        WhichUserResponse whichUserResponse = isLoggedIn(whichUserRequest);
-        CurrentUserResponse currentUserResponse = new CurrentUserResponse();
-
-        if(!whichUserResponse.isStatus()){
-            currentUserResponse.setRole("customer");
-            currentUserResponse.setToken(null);
-            currentUserResponse.setStatus(false);
-            currentUserResponse.setMessage("user is not logged in ");
-            return currentUserResponse;
-        }
-
-        HashMap.Entry<String, HashMap<Users, Boolean>> entry = userIdTokenRoleisLoggedIn.get(whichUserRequest.getUserId()).entrySet().iterator().next();
-        String token = entry.getKey();
-        HashMap<Users, Boolean> roleIsLoggedIn = entry.getValue();
-        String role = roleIsLoggedIn.entrySet().iterator().next().getKey().getRole();
-
-        currentUserResponse.setRole(role);
-        currentUserResponse.setToken(token);
-        currentUserResponse.setStatus(true);
-        currentUserResponse.setMessage("user is logged in ");
-
-        return currentUserResponse;
-    }
-
     public LoginResponse authenticate(LoginRequest loginRequest) {
 
         userIdTokenRoleisLoggedIn = new HashMap<>();
@@ -104,6 +100,7 @@ public class UserService {
         if (userIdTokenRoleisLoggedIn.containsKey(user.getUserId())) {
             loginResponse.setStatus(false);
             loginResponse.setToken(null);
+            loginResponse.setUserId(0);
             loginResponse.setRole("customer");
             loginResponse.setMessage("Logout first!");
             return loginResponse;
@@ -111,6 +108,7 @@ public class UserService {
         if (user == null) {
             loginResponse.setStatus(false);
             loginResponse.setToken(null);
+            loginResponse.setUserId(0);
             loginResponse.setRole("customer");
             loginResponse.setMessage("User not found");
         } else if ((BCrypt.hashpw(loginRequest.getPassword(), user.getSalt())).equals(user.getPassword())) {
@@ -119,7 +117,7 @@ public class UserService {
             String token = BCrypt.gensalt();
             loginResponse.setToken(token);
             loginResponse.setRole(user.getRole());
-
+            loginResponse.setUserId(user.getUserId());
             saveLoggedInUser(user, token);
         } else {
             loginResponse.setStatus(false);
@@ -145,12 +143,12 @@ public class UserService {
             String role = "customer";
             if (user.getRole() == null) {
                 role = "customer";
-            }else if (user.getRole().equals("admin")) {
+            } else if (user.getRole().equals("admin")) {
                 role = "customer";
-            }else if(!user.getRole().equals("customer") && !user.getRole().equals("manager")) {
-                role="customer";
-            }else{
-                role=user.getRole();
+            } else if (!user.getRole().equals("customer") && !user.getRole().equals("manager")) {
+                role = "customer";
+            } else {
+                role = user.getRole();
             }
 
             user.setRole(role);
