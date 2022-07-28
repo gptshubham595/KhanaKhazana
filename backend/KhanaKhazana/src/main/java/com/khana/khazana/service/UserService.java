@@ -13,6 +13,9 @@ import java.util.HashMap;
 @Service
 public class UserService {
 
+    UserService(){
+        userIdTokenRoleisLoggedIn = new HashMap<>();
+    }
     private static HashMap<Long, HashMap<String, HashMap<Users, Boolean>>> userIdTokenRoleisLoggedIn;
     // public static HashMap<Long,String> currRole;
     @Value("${pepper}")
@@ -83,7 +86,6 @@ public class UserService {
     public void saveLoggedInUser(Users user, String token) {
         removeLoggedInUser(user.getUserId());
         HashMap<Users, Boolean> RoleisLoggedIn = new HashMap<>();
-
         RoleisLoggedIn.put(user, true);
         HashMap<String, HashMap<Users, Boolean>> TokenRoleisLoggedIn = new HashMap<>();
         TokenRoleisLoggedIn.put(token, RoleisLoggedIn);
@@ -92,9 +94,7 @@ public class UserService {
 
     public LoginResponse authenticate(LoginRequest loginRequest) {
 
-        userIdTokenRoleisLoggedIn = new HashMap<>();
         LoginResponse loginResponse = new LoginResponse();
-
         Users user = userRepository.findByEmail(loginRequest.getEmail());
         if (userIdTokenRoleisLoggedIn.containsKey(user.getUserId())) {
             loginResponse.setStatus(false);
