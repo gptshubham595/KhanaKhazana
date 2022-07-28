@@ -27,3 +27,7 @@ This is a system designed in Spring Boot Microservices architecture to provide R
 ## DB Schema
  
  <img src="./Diagrams/DB%20Schema.png">
+
+## API LISTS
+
+![API LIST](https://khana-khazana-backend.herokuapp.com/swagger-ui.html)
