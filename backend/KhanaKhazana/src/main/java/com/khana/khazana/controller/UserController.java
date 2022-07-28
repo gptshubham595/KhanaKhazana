@@ -1,5 +1,6 @@
 package com.khana.khazana.controller;
 
+
 import com.khana.khazana.model.*;
 import com.khana.khazana.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +56,7 @@ public class UserController {
         help.setContactCompany("KhanaKhazana");
         return new ResponseEntity<>(help, HttpStatus.OK);
     }
+
     @PostMapping(value = "/logout", consumes = "application/json", produces = "application/json")
     public void Logout(@RequestBody LogoutRequest logoutRequest) {
         userService.Logout(logoutRequest.getUserId());

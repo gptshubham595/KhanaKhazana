@@ -2,8 +2,6 @@ package com.khana.khazana.model;
 
 public class CurrentUserResponse {
     private String role;
-    private String token;
-
     private boolean status;
     private String message;
 
@@ -31,11 +29,4 @@ public class CurrentUserResponse {
         this.role = role;
     }
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 }
