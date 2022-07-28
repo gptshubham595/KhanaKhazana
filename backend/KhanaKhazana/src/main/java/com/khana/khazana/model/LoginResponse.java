@@ -1,8 +1,11 @@
 package com.khana.khazana.model;
 
 public class LoginResponse {
+    private long userId;
     private boolean status;
     private String Message;
+    private String Role;
+    private String token;
 
     public String getRole() {
         return Role;
@@ -12,10 +15,13 @@ public class LoginResponse {
         Role = role;
     }
 
-    private String Role;
-    private String token;
+    public long getUserId() {
+        return userId;
+    }
 
-
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
     public String getToken() {
         return token;
     }
