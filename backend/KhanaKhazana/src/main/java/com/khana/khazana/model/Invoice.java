@@ -17,7 +17,10 @@ public class Invoice {
     private long userId;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long invoiceId;
+    private long invoiceTableId;
+
+    @Column(nullable = false)
+    private String invoiceId;
     @Column(nullable = false)
     private String transactionId;
     @Column(nullable = false)

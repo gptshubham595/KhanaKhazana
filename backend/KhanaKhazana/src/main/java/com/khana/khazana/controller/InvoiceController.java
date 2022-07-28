@@ -15,9 +15,14 @@ public class InvoiceController {
     @Autowired
     InvoiceService invoiceService;
 
-    @PostMapping(value = "/saveorderinfo", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<DefaultResponse> SaveOrderInfo(@RequestBody Invoice invoice){
-        return new ResponseEntity<>(invoiceService.SaveOrderInfo(invoice), HttpStatus.OK);
+//    @PostMapping(value = "/saveorderinfo", consumes = "application/json", produces = "application/json")
+//    public ResponseEntity<DefaultResponse> SaveOrderInfo(@RequestBody Invoice invoice){
+//        return new ResponseEntity<>(invoiceService.SaveOrderInfo(invoice), HttpStatus.OK);
+//    }
+
+    @PostMapping(value = "/saveorderinfoList", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<InvoiceNoTableResponse> SaveOrderInfoList(@RequestBody InvoiceNoTableRequest invoiceNoTableRequest){
+        return new ResponseEntity<>(invoiceService.SaveOrderInfoList(invoiceNoTableRequest), HttpStatus.OK);
     }
 
     @PostMapping(value = "/invoice", consumes = "application/json", produces = "application/json")
