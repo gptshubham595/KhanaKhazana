@@ -2,7 +2,6 @@ package com.khana.khazana.controller;
 
 
 import com.khana.khazana.model.*;
-import com.khana.khazana.repository.UserRepository;
 import com.khana.khazana.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -58,14 +57,14 @@ public class UserController {
         return new ResponseEntity<>(help, HttpStatus.OK);
     }
 
-    @PostMapping(value = "/logout", consumes = "application/json", produces = "application/json")
+    @PostMapping(value = "/logoutUser", consumes = "application/json", produces = "application/json")
     public ResponseEntity<DefaultResponse> Logout(@RequestBody WhichUserRequest whichUserRequest) {
         DefaultResponse defaultResponse = userService.Logout(whichUserRequest);
-        if(defaultResponse.isStatus()){
+        if (defaultResponse.isStatus()) {
             return new ResponseEntity<>(defaultResponse, HttpStatus.OK);
         }
 
-        return  new ResponseEntity<>(defaultResponse, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(defaultResponse, HttpStatus.BAD_REQUEST);
     }
 
     @PostMapping(value = "/currRole", consumes = "application/json", produces = "application/json")
