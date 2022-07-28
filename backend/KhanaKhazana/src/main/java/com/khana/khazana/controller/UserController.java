@@ -59,4 +59,23 @@ public class UserController {
     public void Logout(@RequestBody LogoutRequest logoutRequest) {
         userService.Logout(logoutRequest.getUserId());
     }
+
+    @PostMapping(value = "/currRole", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<CurrentUserResponse> currentRole(@RequestBody WhichUserRequest whichUserRequest) {
+        if (whichUserRequest == null)
+            return new ResponseEntity<>(new CurrentUserResponse(), HttpStatus.BAD_REQUEST);
+        CurrentUserResponse currentUserResponse = userService.currentUser(whichUserRequest);
+        if (!currentUserResponse.isStatus())
+            return new ResponseEntity<>(currentUserResponse, HttpStatus.UNAUTHORIZED);
+        return new ResponseEntity<>(currentUserResponse, HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/isLoggedIn", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<WhichUserResponse> isLoggedIn(@RequestBody WhichUserRequest whichUserRequest) {
+        WhichUserResponse whichUserResponse = userService.isLoggedIn(whichUserRequest);
+        if (!whichUserResponse.isStatus())
+            return new ResponseEntity<>(whichUserResponse, HttpStatus.UNAUTHORIZED);
+        return new ResponseEntity<>(whichUserResponse, HttpStatus.OK);
+    }
+
 }
