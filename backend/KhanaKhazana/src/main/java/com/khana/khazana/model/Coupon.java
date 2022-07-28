@@ -1,9 +1,14 @@
 package com.khana.khazana.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Coupon")
+@Getter
+@Setter
 public class Coupon {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,30 +16,8 @@ public class Coupon {
 
     @Column(nullable = false)
     private String couponString;
+
     @Column(nullable = false)
-    private Double couponAmt;
+    private Double couponPercentage;
 
-    public Long getCouponId() {
-        return couponId;
-    }
-
-    public void setCouponId(Long couponId) {
-        this.couponId = couponId;
-    }
-
-    public String getCouponString() {
-        return couponString;
-    }
-
-    public void setCouponString(String couponString) {
-        this.couponString = couponString;
-    }
-
-    public Double getCouponAmt() {
-        return couponAmt;
-    }
-
-    public void setCouponAmt(Double couponAmt) {
-        this.couponAmt = couponAmt;
-    }
 }
