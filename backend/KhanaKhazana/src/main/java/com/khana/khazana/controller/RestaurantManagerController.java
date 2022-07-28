@@ -15,7 +15,7 @@ public class RestaurantManagerController {
     RestaurantManagerService restaurantManagerService;
 
     @PostMapping(value = "/addRestaurant", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<DefaultResponse> addRestaurant(@RequestBody Restaurant addRestaurantRequest) {
+    public ResponseEntity<DefaultResponse> addRestaurant(@RequestBody RestaurantUtility addRestaurantRequest) {
         DefaultResponse response = restaurantManagerService.addRestaurant(addRestaurantRequest);
         if (response.isStatus()) {
             return new ResponseEntity<>(response, HttpStatus.OK);
