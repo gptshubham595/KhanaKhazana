@@ -2,7 +2,7 @@ package com.khana.khazana.model;
 
 import java.util.List;
 
-public class ShowAllCustomerResponse {
+public class ShowAllUsersResponse {
 
     private List<Users> entries;
     private String message;

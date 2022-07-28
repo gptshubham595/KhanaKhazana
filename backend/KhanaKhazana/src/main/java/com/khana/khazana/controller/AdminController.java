@@ -7,6 +7,7 @@ import com.khana.khazana.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,12 +19,12 @@ public class AdminController {
     AdminService adminService;
 
     @GetMapping(value = "/showAllCustomer")
-    public ResponseEntity<ShowAllCustomerResponse> DisplayAllUsers() {
+    public ResponseEntity<ShowAllUsersResponse> DisplayAllUsers(){
         return new ResponseEntity<>(adminService.AllCustomer(), HttpStatus.OK);
     }
 
     @GetMapping(value = "/showAllManager")
-    public ResponseEntity<ShowAllCustomerResponse> DisplayAllManagers() {
+    public ResponseEntity<ShowAllUsersResponse> DisplayAllManagers(){
         return new ResponseEntity<>(adminService.AllManager(), HttpStatus.OK);
     }
 
