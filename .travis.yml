@@ -35,7 +35,6 @@ install:
 # https://github.com/codecov/example-java-maven
 script: 
 - mvn cobertura:cobertura
-- java -jar ../evosuite-1.0.6.jar -class main.java.com.khana.khazana.KhanaKhazana.java -projectCP target/classes
 # This is to enable CodeCov's coverage
 # If a build is successful, the code is submitted for coverage analysis
 after_success:
