@@ -19,6 +19,7 @@ jdk:
 - openjdk8
 
 before_install:
+- cd backend/KhanaKhazana
 - mvn clean
 - echo "$DOCKER_PASS" | docker login  -u "$DOCKER_USER" --password-stdin
 - docker pull openjdk:8-jdk-alpine
@@ -36,7 +37,6 @@ install:
 
 # https://github.com/codecov/example-java-maven
 script: 
-- cd backend/KhanaKhazana
 - mvn cobertura:cobertura
 # This is to enable CodeCov's coverage
 # If a build is successful, the code is submitted for coverage analysis
