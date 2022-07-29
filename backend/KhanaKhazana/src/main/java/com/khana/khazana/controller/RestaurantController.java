@@ -5,10 +5,7 @@ import com.khana.khazana.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -45,6 +42,14 @@ public class RestaurantController {
         if(restaurantRequested.getMessage().equals("Success"))
             return new ResponseEntity<>(restaurantRequested,HttpStatus.OK);
         else return new ResponseEntity<>(restaurantRequested,HttpStatus.BAD_REQUEST);
+    }
+
+    @GetMapping(value = "/restaurant/food/all")
+    public ResponseEntity<FoodListResponse> getAllFoodOfRestaurant(@RequestBody FoodByRestaurantRequest foodByRestaurantRequest) {
+        FoodListResponse foodListResponse  = restaurantService.getAllFoodOfRestaurant(foodByRestaurantRequest);
+        if(foodListResponse.getMessage().equals("Success"))
+            return new ResponseEntity<>(foodListResponse,HttpStatus.OK);
+        else return new ResponseEntity<>(foodListResponse,HttpStatus.BAD_REQUEST);
     }
 
 }
