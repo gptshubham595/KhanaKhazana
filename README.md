@@ -6,6 +6,7 @@ _A_ ___OLA___ ___Group9___ _Capstone_ _Porject_ _For_ _Food_ _Delivery_ _Applica
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)  ![MySQL](	https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)![SpringBoot](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)  ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
 [![Build Status](https://app.travis-ci.com/gptshubham595/OLAGRP9.svg?branch=main)](https://app.travis-ci.com/gptshubham595/OLAGRP9)
+
 ![JDK](https://img.shields.io/static/v1?label=JDK%20Version&message=1.8&color=green)
 ![Swagger API](https://img.shields.io/static/v1?label=Swagger&message=Enabled&color=green)
 ![License](https://img.shields.io/static/v1?label=LICENSE&message=Creative%20Commons%20Zero%20v1.0%20Universal&color=red)
