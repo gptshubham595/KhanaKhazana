@@ -21,17 +21,6 @@ jdk:
 before_install:
 - cd backend/KhanaKhazana
 - mvn clean
-- apt-get install openjdk-8-jdk
-      # Java is at /c/Program Files/OpenJDK/openjdk-<version-patch>/bin which is liable to change.
-      # Chocolatey has updated the PATH with that, but only in powershell [Environment].
-      # Dig out the Java path from [Environment] and translate it to Unix.
-- java_exe=$(powershell -NonInteractive -Command
-    '$env:PATH=[Environment]::GetEnvironmentVariable("PATH","Machine");
-        write((Get-Command java).Path)')
-- java_exe=$(cygpath "$java_exe")
-- echo $java_exe
-- export JAVA_HOME="${java_exe%/bin/*}"
-- export PATH="$JAVA_HOME/bin:$PATH"
 # git strips the wrapper jar file so we have to force its download during the build
 install:
 - mvn -N io.takari:maven:wrapper
