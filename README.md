@@ -6,7 +6,7 @@ _A_ ___OLA___ ___Group9___ _Capstone_ _Porject_ _For_ _Food_ _Delivery_ _Applica
 
 ![JDK](https://img.shields.io/static/v1?label=JDK%20Version&message=1.8&color=green)
 ![Swagger API](https://img.shields.io/static/v1?label=Swagger&message=Enabled&color=green)
-
+![License](https://img.shields.io/static/v1?label=LICENSE&message=Creative%20Commons%20Zero%20v1.0%20Universal&color=red)
 ## Overview
 
 This is a capstone project delivering a sample food delivery with backend system using spring boot and frontend usiong react. This is a system designed in Spring Boot Microservices architecture to provide REST APIs for food ordering and delivery system. KhanaKhazana is a full-featured FoodOrdering app. Using this application one can visualize various available features like authentication, user ordering, managing of the restaurants, admin controlling, coupons usage, searching food or restaurants, etc.
