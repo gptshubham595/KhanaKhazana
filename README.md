@@ -2,7 +2,7 @@
 
 _A_ ___OLA___ ___Group9___ _Capstone_ _Porject_ _For_ _Food_ _Delivery_ _Application_
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)  ![MySQL](	https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)![SpringBoot](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)  ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)  ![MySQL](	https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)![SpringBoot](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)  ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ![JDK](https://img.shields.io/static/v1?label=JDK%20Version&message=1.8&color=green)
 ![Swagger API](https://img.shields.io/static/v1?label=Swagger&message=Enabled&color=green)
@@ -27,7 +27,7 @@ This is a capstone project delivering a sample food delivery with backend system
 | Shridam Mahajan   | shridam1207     |    Frontend    |
 
 
-## GUIDELINES
+## Guidelines
 
 **BACKEND**
  - To run the application on localhost 
@@ -72,14 +72,38 @@ This is a capstone project delivering a sample food delivery with backend system
 - **Spring Boot** is used for fast REST API development and independant deployment.
 
 ## Maven Libraries used
- - [Spring boot Starter Web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web/2.7.2)
- - [Spring boot Starter Security](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security/2.7.2)
- - [Swagger](https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui)
- - [Lombok](https://mvnrepository.com/artifact/org.projectlombok/lombok)
- - [Commons-Codec](https://mvnrepository.com/artifact/commons-codec/commons-codec)
+ - [Spring boot Starter Web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web/2.7.2) : TO create a spring boot application
+ - [Spring boot Starter Security](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security/2.7.2) : To add salt and pepper encrytption in registeration 
+ - [Swagger](https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui) : To generate api endpoints list
+ - [Lombok](https://mvnrepository.com/artifact/org.projectlombok/lombok) : To auto generate getter and setter
+ - [Commons-Codec](https://mvnrepository.com/artifact/commons-codec/commons-codec) : To encode and decode to base64
  - [Mysql COnnector](https://mvnrepository.com/artifact/mysql/mysql-connector-java) : To connect spring boot application to mysql database
  - [JPAConnector](https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa) : TO perform prebuild mysql queries 
  - [Commons-Lang3](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3) : To generate random alphanumeric invoice and transaction Id
+ 
+ 
+ ## Features Implemented
+ 
+   1. Users
+    - Registeration & Sign In 
+    - Session Token generation
+    - Order Placing
+    - Invoice Generation
+    - Coupons
+    - User profile Section
+    - Wild card Search food and restaurants
+   
+   2. Admins
+    - manage Users orders
+    - Get All Users and Managers Data
+    - Add coupons 
+    - Ban Users 
+   
+   3. Manager
+    - Add Restaurants
+    - Add Food Items
+    
+    
  
  ## System Architecture Diagram
  
