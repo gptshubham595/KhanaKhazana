@@ -135,7 +135,6 @@ public class UserService {
     public SignUpResponse Register(Users user) {
         Users currentUser = userRepository.findByEmail(user.getEmail());
         SignUpResponse signUpResponse = new SignUpResponse();
-
         if (currentUser != null) {
             signUpResponse.setStatus(false);
             signUpResponse.setMessage("User already exists");
