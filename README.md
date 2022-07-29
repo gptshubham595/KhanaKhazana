@@ -7,6 +7,30 @@
 
 This is a system designed in Spring Boot Microservices architecture to provide REST APIs for food ordering and delivery system.
 
+## Heroku Deploments
+ ### Website Deployed at : http://khanakhazana.rf.gd/
+ 1. Backend
+   - https://khana-khazana-backend.herokuapp.com/
+ 2. Frontend
+   - http://khana-khazana-freontend.herokuapp.com/
+
+## ALL API ENDPOINTS SWAGGER UI
+ - [SWAGGER API LIST](https://khana-khazana-backend.herokuapp.com/swagger-ui.html)
+
+## Team Structure
+
+| Name            |  GitUsername   |  Operations   |
+| ----------------| -------------- | ------------- |
+| Shubham Gupta   | gptshubham595  |    Backend    |
+| Pankaj Verma    | Pankaj734      |    Backend    |
+| Apoorv Lodhi    | apoorvlodhi-io |    Backend    |
+| Aman Kumar      | huamanoid      |    Backend    |
+| Amish Anand     | inferno-afk    |    Backend    |
+| Shubham Joshi   | shubhamjoshi98 |    Backend    |
+| Akshay Choudhary| akshay2613     |    Backend    |
+| Aditya Bhadoriya| Aditya17072000 |    Frontend   |
+| Shridam Mahajan | shridam1207    |    Frontend   |
+
 
 ## Development environment
 
@@ -30,10 +54,6 @@ This is a system designed in Spring Boot Microservices architecture to provide R
 ## DB Schema
  
  <img src="./Diagrams/DB%20Schema.png">
-
-## API LISTS
-
-[SWAGGER API LIST](https://khana-khazana-backend.herokuapp.com/swagger-ui.html)
 
 ## Maven Libraries used
  - Spring boot Starter Web
