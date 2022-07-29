@@ -44,7 +44,7 @@ public class RestaurantController {
         else return new ResponseEntity<>(restaurantRequested,HttpStatus.BAD_REQUEST);
     }
 
-    @GetMapping(value = "/restaurant/food/all")
+    @GetMapping(value = "/food/all")
     public ResponseEntity<FoodListResponse> getAllFoodOfRestaurant(@RequestBody FoodByRestaurantRequest foodByRestaurantRequest) {
         FoodListResponse foodListResponse  = restaurantService.getAllFoodOfRestaurant(foodByRestaurantRequest);
         if(foodListResponse.getMessage().equals("Success"))

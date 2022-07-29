@@ -30,7 +30,7 @@ public class FoodController {
         return new ResponseEntity<>(restaurantListResponse, HttpStatus.OK);
     }
 
-    @GetMapping("/food/all")
+    @GetMapping("/restaurant/food/all")
     public ResponseEntity<FoodListResponse> getAllFoodItems(){
         FoodListResponse foodListResponse = new FoodListResponse();
         foodListResponse.setFoodList(foodService.getAllFoodItems());
