@@ -21,7 +21,7 @@ jdk:
 before_install:
 - cd backend/KhanaKhazana
 - mvn clean
-- choco install openjdk11 ant
+- apt-get install openjdk-8-jdk
       # Java is at /c/Program Files/OpenJDK/openjdk-<version-patch>/bin which is liable to change.
       # Chocolatey has updated the PATH with that, but only in powershell [Environment].
       # Dig out the Java path from [Environment] and translate it to Unix.
