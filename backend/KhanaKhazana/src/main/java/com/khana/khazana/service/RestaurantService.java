@@ -66,11 +66,4 @@ public class RestaurantService {
         return restaurantResponse;
 
     }
-    public List<Restaurant> getAllRestaurantsWithSpecificFood(String food) {
-        return restaurantRepository.findRestaurantByFood(food);
-    }
-
-    public List<Food> getAllFoodItems() {
-        return restaurantRepository.findAllFoodItems();
-    }
 }
