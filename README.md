@@ -88,6 +88,7 @@ This is a capstone project delivering a sample food delivery with backend system
  ## Features Implemented
  
    1. Users
+
     - Registeration & Sign In 
     - Session Token generation
     - Order Placing
@@ -97,14 +98,17 @@ This is a capstone project delivering a sample food delivery with backend system
     - Wild card Search food and restaurants
    
    2. Admins
+
     - manage Users orders
     - Get All Users and Managers Data
     - Add coupons 
     - Ban Users 
    
    3. Manager
+
     - Add Restaurants
     - Add Food Items
+    - Modify Food Items
     
     
  
