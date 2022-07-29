@@ -47,29 +47,4 @@ public class RestaurantController {
         else return new ResponseEntity<>(restaurantRequested,HttpStatus.BAD_REQUEST);
     }
 
-    //List all restaurant with specific menu item
-    @GetMapping("/search/{food}")
-    public ResponseEntity<RestaurantListResponse> getAllRestaurantsWithSpecificFood(@PathVariable String food){
-        RestaurantListResponse restaurantListResponse = new RestaurantListResponse();
-        restaurantListResponse.setRestaurantList(restaurantService.getAllRestaurantsWithSpecificFood(food));
-        if(restaurantListResponse.getRestaurantList().size() == 0){
-            restaurantListResponse.setMessage("Sorry no restaurant is open now that has " + food);
-        }else{
-            restaurantListResponse.setMessage("We found total " + restaurantListResponse.getRestaurantList().size() + " restaurants with " + food);
-        }
-        return new ResponseEntity<>(restaurantListResponse, HttpStatus.OK);
-    }
-
-    @GetMapping("/food/all")
-    public ResponseEntity<FoodListResponse> getAllFoodItems(){
-        FoodListResponse foodListResponse = new FoodListResponse();
-        foodListResponse.setFoodList(restaurantService.getAllFoodItems());
-        if(foodListResponse.getFoodList().size() == 0){
-            foodListResponse.setMessage("Sorry we dont have any available food items");
-        }else{
-            foodListResponse.setMessage("We have total " + foodListResponse.getFoodList().size() + " food items in our menu.");
-        }
-        return new ResponseEntity<>(foodListResponse,HttpStatus.OK);
-    }
-
 }
