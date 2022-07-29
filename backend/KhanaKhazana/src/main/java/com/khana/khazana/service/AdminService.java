@@ -3,6 +3,7 @@ package com.khana.khazana.service;
 import com.khana.khazana.model.*;
 import com.khana.khazana.repository.AdminRespository;
 import com.khana.khazana.repository.RestaurantRepository;
+import com.khana.khazana.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,8 @@ public class AdminService {
     AdminRespository adminRespository;
     @Autowired
     RestaurantRepository restaurantRepository;
+    @Autowired
+    UserRepository userRepository;
 
     public ShowAllUsersResponse AllCustomer(){
         ShowAllUsersResponse showAllUsersResponse = new ShowAllUsersResponse();
@@ -46,6 +49,13 @@ public class AdminService {
 
     public BanUserResponse banUser(long userId){
         BanUserResponse banUserResponse = new BanUserResponse();
+        Users user = userRepository.findByUserId(userId);
+        if(user.getRole().equals("admin") || user.getRole().equals("manager")){
+            banUserResponse.setStatus(false);
+            banUserResponse.setMessage("Invalid operation, trying to delete admin/manager");
+            return banUserResponse;
+        }
+
         adminRespository.deleteById(userId);
         banUserResponse.setStatus(true);
         banUserResponse.setMessage("User Banned");

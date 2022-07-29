@@ -22,6 +22,7 @@ public class AdminController {
 
     @Autowired
     AdminService adminService;
+    @Autowired
     UserRepository userRepository;
     public boolean AdminExistsInDB(long userId){
         Users user = userRepository.findByUserId(userId);

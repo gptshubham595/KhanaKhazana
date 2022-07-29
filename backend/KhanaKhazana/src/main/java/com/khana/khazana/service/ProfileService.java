@@ -15,6 +15,7 @@ public class ProfileService {
     public ProfileResponse getProfileData(WhichUserRequest whichUserRequest) {
         WhichUserResponse whichUserResponse = isLoggedIn(whichUserRequest);
         Users userData = userRepository.findByUserId(whichUserRequest.getUserId());
+      
         ProfileResponse profileResponse = new ProfileResponse();
 
         if(!whichUserResponse.isStatus()){
@@ -31,6 +32,7 @@ public class ProfileService {
 
             profileResponse.setFlag(true);
             profileResponse.setMessage("Profile Fetched Successfully");
+            profileResponse.setRole(userData.getRole());
         }else {
             profileResponse.setFlag(false);
             profileResponse.setMessage("Profile Fetching  Unsuccessfull");

@@ -28,7 +28,7 @@ public class InvoiceService {
 
     public boolean UserExistsInDB(long userId) {
         Users user = userRepository.findByUserId(userId);
-        if (user == null || !user.getRole().equals("admin")) {
+        if (user == null || !user.getRole().equals("customer") ) {
             return false;
         }
 
@@ -82,7 +82,7 @@ public class InvoiceService {
 //        return defaultResponse;
     }
 
-    public InvoiceResponse GenerateInvoice(WhichUserRequest whichUserRequest) {
+    public InvoiceResponse GetAllInvoices(WhichUserRequest whichUserRequest) {
         WhichUserResponse whichUserResponse = isLoggedIn(whichUserRequest);
         boolean userExistsInDB = UserExistsInDB(whichUserRequest.getUserId());
         InvoiceResponse invoiceResponse = new InvoiceResponse();

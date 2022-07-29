@@ -20,6 +20,7 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
     BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(16);
+
     UserService() {
         userIdTokenRoleisLoggedIn = new HashMap<>();
     }
@@ -124,6 +125,34 @@ public class UserService {
             loginResponse.setRole(user.getRole());
             loginResponse.setUserId(user.getUserId());
             saveLoggedInUser(user, token);
+        } else {
+            loginResponse.setStatus(false);
+            loginResponse.setMessage("Invalid Password" + BCrypt.hashpw(loginRequest.getPassword(), user.getSalt()));
+        }
+
+        return loginResponse;
+    }
+
+    public LoginResponse sendToken(LoginRequest loginRequest) {
+
+        LoginResponse loginResponse = new LoginResponse();
+        Users user = userRepository.findByEmail(loginRequest.getEmail());
+        if (user == null) {
+            loginResponse.setStatus(false);
+            loginResponse.setToken(null);
+            loginResponse.setUserId(0);
+            loginResponse.setRole("customer");
+            loginResponse.setMessage("User not found");
+        } else if ((BCrypt.hashpw(loginRequest.getPassword(), user.getSalt())).equals(user.getPassword())) {
+            loginResponse.setStatus(true);
+            loginResponse.setMessage("token fetched successfully");
+            HashMap.Entry<String, HashMap<Users, Boolean>> entry = userIdTokenRoleisLoggedIn.get(user.getUserId()).entrySet().iterator().next();
+            String token = entry.getKey();
+//            HashMap<Users, Boolean> roleIsLoggedIn = entry.getValue();
+
+            loginResponse.setRole(user.getRole());
+            loginResponse.setToken(token);
+            loginResponse.setUserId(user.getUserId());
         } else {
             loginResponse.setStatus(false);
             loginResponse.setMessage("Invalid Password" + BCrypt.hashpw(loginRequest.getPassword(), user.getSalt()));

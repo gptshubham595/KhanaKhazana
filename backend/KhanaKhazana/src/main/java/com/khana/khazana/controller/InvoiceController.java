@@ -7,8 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import static com.khana.khazana.service.UserService.isLoggedIn;
-
 @RestController
 public class InvoiceController {
 
@@ -27,7 +25,7 @@ public class InvoiceController {
 
     @PostMapping(value = "/invoice", consumes = "application/json", produces = "application/json")
     public ResponseEntity<InvoiceResponse> GenerateInvoice(@RequestBody WhichUserRequest whichUserRequest){
-        InvoiceResponse invoiceResponse = invoiceService.GenerateInvoice(whichUserRequest);
+        InvoiceResponse invoiceResponse = invoiceService.GetAllInvoices(whichUserRequest);
         if(invoiceResponse.isStatus()){
             return new ResponseEntity<>(invoiceResponse, HttpStatus.OK);
         }
