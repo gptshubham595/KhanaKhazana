@@ -34,7 +34,7 @@ public class InvoiceService {
             Coupon coupon = couponRepository.findByCouponString(invoice.getCoupon());
             double amount = invoice.getFoodQty()*invoice.getFoodCost() - coupon.getCouponAmt()>0?(invoice.getFoodQty()*invoice.getFoodCost() - coupon.getCouponAmt()):0;
             invoice.setFoodCost(amount);
-            
+
             invoiceRepository.save(invoice);
 
             defaultResponse.setStatus(true);
