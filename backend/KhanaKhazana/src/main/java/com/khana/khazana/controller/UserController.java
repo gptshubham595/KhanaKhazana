@@ -85,4 +85,12 @@ public class UserController {
         return new ResponseEntity<>(whichUserResponse, HttpStatus.OK);
     }
 
+    @PostMapping(value = "/getToken", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<LoginResponse> getToken(@RequestBody LoginRequest loginRequest) {
+        LoginResponse loginResponse = userService.sendToken(loginRequest);
+        if (!loginResponse.isStatus())
+            return new ResponseEntity<>(loginResponse, HttpStatus.UNAUTHORIZED);
+        return new ResponseEntity<>(loginResponse, HttpStatus.OK);
+    }
+
 }
