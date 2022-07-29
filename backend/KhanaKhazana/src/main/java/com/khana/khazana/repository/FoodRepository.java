@@ -1,6 +1,7 @@
 package com.khana.khazana.repository;
 
 import com.khana.khazana.model.Food;
+import com.khana.khazana.model.FoodListResponse;
 import com.khana.khazana.model.Restaurant;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -16,7 +17,7 @@ public interface FoodRepository extends JpaRepository<Food, Long> {
 
     Food findByFoodId(Long foodId);
 
-    @Query(value="Select * from restaurant where restaurant_id = (select restaurant_id from food where food_title LIKE '%?1%' or food_desc like '%?1') or restaurant_name LIKE '%?1%'",nativeQuery = true)
+    @Query(value="Select * from restaurant where restaurant_id in (select distinct restaurant_id from food where food_title LIKE '%?1%' or food_desc like '%?1%')",nativeQuery = true)
     List<Restaurant> findRestaurantByFood(String food);
 
     List<Food> findAll();
@@ -40,6 +41,9 @@ public interface FoodRepository extends JpaRepository<Food, Long> {
     int updateFoodTableByFoodId(String foodTitle, String FoodDesc, Double FoodCost, String Foodpic, String FoodType, Long FoodId, Long RestaurantId);
 
     List<Food> findAllByRestaurantId(Long restaurantId);
+
+    @Query(value = "Select * from food where restaurant_id=?1", nativeQuery = true)
+    List<Food> getFoodByRestaurant(long restaurantId);
 
 //    boolean find
 }
