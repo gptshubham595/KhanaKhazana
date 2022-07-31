@@ -1,34 +1,25 @@
-import { Route, Routes } from 'react-router-dom';
-import React from 'react'
-import {AnimatePresence} from 'framer-motion'
-import { Admin,  Header, MainContainer } from './components';
-import Contact from "./components/Contact"
-import Signup from './components/Signup';
-import Login from './components/Login';
-import AllRestaurant from './components/AllRestaurant';
-import Restaurant from './components/Restaurant';
+import logo from './logo.svg';
+import './App.css';
 
-
-const App = () => {
+function App() {
   return (
-    <AnimatePresence>
-    <div className="w-screen h-auto flex flex-col bg-primary">
-        <Header/>
-
-        <main className='mt-7 md:mt-10 px-4 md:px-16 py-2 w-full'>
-          <Routes>
-            <Route exact path='/*' element={<MainContainer />}/>
-            <Route exact path='/Admin' element={<Admin />}/>
-            <Route exact path="/Contact" element={<Contact/>}/>
-            <Route exact path="/Login" element={<Login/>}/>
-            <Route exact path="/AllRestaurant" element={<AllRestaurant />}/>
-            <Route exact path="/Restaurant" element={<Restaurant />}/>
-
-          </Routes>
-        </main>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
-    </AnimatePresence>
-  )
+  );
 }
 
-export default App
+export default App;
